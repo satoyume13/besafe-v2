@@ -1,0 +1,277 @@
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(23, 27, 35, 0.8), rgba(23, 27, 35, 0.9)), 
+              url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at center, rgba(6, 214, 160, 0.1) 0%, transparent 60%);
+  z-index: 0;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  background-color: var(--accent-color);
+  color: #000;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: all var(--transition-speed);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ctaButton:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 214, 160, 0.3);
+}
+
+.section {
+  padding: 6rem 2rem;
+}
+
+.sectionDark {
+  background-color: var(--bg-secondary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--accent-color);
+}
+
+/* About Us Section */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutLogoText {
+  font-size: 3rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.aboutLogoText span {
+  color: var(--accent-color);
+  font-size: 4rem;
+}
+
+.aboutContent h3 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.aboutContent p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Services Section */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.serviceCard {
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform var(--transition-speed);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(6, 214, 160, 0.3);
+}
+
+.serviceImage {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.serviceContent {
+  padding: 2rem;
+}
+
+.serviceContent h3 {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.serviceContent p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.serviceLink {
+  color: var(--text-main);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color var(--transition-speed);
+}
+
+.serviceLink:hover {
+  color: var(--accent-color);
+}
+
+/* Contact Section */
+.contactGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contactForm {
+  background-color: var(--bg-color);
+  border: 1px solid rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.formLabel span {
+  color: #ff4d4d;
+}
+
+.formInput, .formTextarea {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  color: var(--text-main);
+  font-family: inherit;
+}
+
+.formInput:focus, .formTextarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.formTextarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.infoLabel {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.contactInfo h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contactInfo p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.socialHeader {
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-color);
+  transition: all var(--transition-speed);
+}
+
+.socialIcon:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  .aboutGrid, .contactGrid {
+    grid-template-columns: 1fr;
+  }
+  .aboutLogoText {
+    justify-content: center;
+  }
+}
