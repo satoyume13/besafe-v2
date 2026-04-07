@@ -59,6 +59,142 @@
   box-shadow: 0 4px 12px rgba(6, 214, 160, 0.3);
 }
 
+.carouselSection {
+  background: var(--bg-darker, #0f172a);
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.carouselSection :global(.w-full) {
+  padding: 0 1rem;
+}
+
+.carouselCard {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 500px;
+  background: #1e293b;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  cursor: grab;
+}
+
+.carouselCard:active {
+  cursor: grabbing;
+}
+
+@media (max-width: 960px) {
+  .carouselCard {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.carouselImageWrapper {
+  flex: 1.2;
+  position: relative;
+  min-height: 350px;
+}
+
+.carouselImage {
+  object-fit: cover;
+}
+
+.carouselOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(30,41,59,0) 0%, rgba(30,41,59,0.9) 100%);
+}
+
+@media (max-width: 960px) {
+  .carouselOverlay {
+    background: linear-gradient(0deg, rgba(30,41,59,0.9) 0%, rgba(30,41,59,0) 100%);
+  }
+}
+
+.carouselContent {
+  flex: 1;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+  background: #1e293b;
+}
+
+.carouselTag {
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.carouselTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1.2rem;
+  line-height: 1.1;
+}
+
+@media (max-width: 480px) {
+  .carouselTitle {
+    font-size: 1.8rem;
+  }
+  .carouselContent {
+    padding: 1.5rem;
+  }
+}
+
+.carouselDescription {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.carouselBtn {
+  background: var(--accent-color, #06d6a0);
+  color: #0f172a;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.carouselBtn:hover {
+  transform: translateY(-2px);
+}
+
+.carouselNav {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgba(30, 41, 59, 0.8) !important;
+  color: white !important;
+  backdrop-filter: blur(10px);
+  z-index: 20;
+}
+
+.carouselNav:hover {
+  background: var(--accent-color, #06d6a0) !important;
+  border-color: var(--accent-color, #06d6a0) !important;
+  color: #0f172a !important;
+}
+
 .section {
   padding: 6rem 2rem;
 }

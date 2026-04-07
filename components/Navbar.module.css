@@ -83,7 +83,51 @@
 }
 
 .mobileMenu {
+  justify-content: space-between;
+}
+
+.mobileActions {
   display: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .desktopMenu {
+    display: none;
+  }
+  .mobileActions {
+    display: flex;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+.langToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 99px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-left: 1rem;
+}
+
+.langToggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-color, #06d6a0);
+}
+
+.langToggleMobile {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
